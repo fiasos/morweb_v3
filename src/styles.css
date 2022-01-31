@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+@import url("https://use.typekit.net/com5nvg.css");
+/* Din */
+@import url("https://use.typekit.net/com5nvg.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply rounded bg-lime-300 
+  shadow-md overflow-hidden h-fit w-72 p-2 mx-auto xxs:my-6;
+}
+
+.button {
+  @apply rounded-full 
+  py-3 px-10 uppercase font-medium text-lg cursor-pointer bg-verde text-whike;
+}
+
+[role="tab"].active {
+  @apply text-red-600 border-red-600 dark:text-red-500 dark:border-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-500 dark:hover:border-red-500;
+}
+
+.titoletto {
+  @apply font-bold  xxs:text-lg;
+}
+
+.paragrafo {
+  @apply block py-3 font-normal;
+}
