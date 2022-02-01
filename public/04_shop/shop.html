@@ -15,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
     <!--Cronos-->
     <link rel="stylesheet" href="https://use.typekit.net/com5nvg.css">
+
+    <!-- DATABASE -->
+    <script src="/public/js/firebase-setup.js"></script>
+
   </head>
 
   <body class="font-rubik text-verde bg-whike w-screen ">
@@ -107,104 +111,9 @@
     <!--content-->
     <div class="my-16 bigxl:mx-72 xl:mx-48 md:mx-28 sm:mx-16">
       <!-- CARDS -->
-      <div class="grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-16 xxs:gap-4">
-       <!-- base -->
-        <div class="card"> 
-         <a href="template.html">
-            <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-            <div class="m-4 text-center">
-              <span class="font-semibold text-2xl">Sugar Maple</span>
-              <span class="block font-light text-lg ">Base</span>
-              <span class="block text-lg font-medium leading-5 pt-3">€ 0,04</span>
-              <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-              <a href="/public/06_project/project.html" class="button">Subscribe</a>
-            </div>
-         </a>
-        </div>
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Lebanon Cedar</span>
-            <span class="block font-light text-lg ">Base</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,04</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Pineapple Palm</span>
-            <span class="block font-light text-lg ">Base</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,04</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-         <!-- regular -->
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Grandier's Baobab</span>
-            <span class="block font-light text-lg ">Regular</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,08</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Kokerboom</span>
-            <span class="block font-light text-lg ">Regular</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,08</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Korean Fir</span>
-            <span class="block font-light text-lg ">Regular</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,08</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-         <!-- premium -->
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">American Ash</span>
-            <span class="block font-light text-lg ">Premium</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,12</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Swamp Cypress</span>
-            <span class="block font-light text-lg ">Premium</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,12</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-        <div class="card"> 
-          <img src="/public/04_shop/01_img/01_rolls/swamp_cypress.png" alt="stew" class="m-auto py-4 w-40">
-          <div class="m-4 text-center">
-            <span class="font-semibold text-2xl">Paranà Pine</span>
-            <span class="block font-light text-lg ">Premium</span>
-            <span class="block text-lg font-medium leading-5 pt-3">€ 0,12</span>
-            <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-            <a href="/public/06_project/project.html" class="button">Subscribe</a>
-          </div>
-        </div>
-
-     </div>
+      <div id="card-container" class="grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-16 xxs:gap-4">
+        
+      </div>
     </div>
 
     
@@ -298,6 +207,8 @@
     <script src="/public/index.js"></script>
     <!--Animazione hamburger-->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="/public/04_shop/Card.js"></script>
+
   </body>
 </html>
 
