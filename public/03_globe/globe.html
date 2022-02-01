@@ -24,7 +24,7 @@
 
   <body class="font-rubik text-whike bg-verde">
     <script src="/public/03_globe/js/three.js"></script>
-    <header id="header">
+    <header id="header" class="absolute h-18 w-full">
       <!--Bar: LOGO E MENU-->
       <nav>
         <div class="flex justify-between items-center pt-2 
@@ -83,7 +83,7 @@
 
       <!--Voci menù-->
     <div class="hidden" id="sfondo"> 
-        <div class="grid place-items-center h-152" >
+        <div class="grid place-items-center h-100" >
           <ul class="hidden text-center object-center font-medium text-xl leading-9" id="menu">
           <li><a href="/public/index.html">HOME</a></li>
           <li><a href="/public/02_discover/discover.html">DISCOVER</a></li>
@@ -100,22 +100,19 @@
     </header>
 
     <!--CONTENT-->
-     <canvas id="vascan" class="h-44 w-screen">
+    <div class="absolute pl-5">
+       <!-- <div id="disappear" class="absolute text-center"> DAJE</div> -->
+       <div id="treeName" class="fixed pt-20 pl-5"></div>
+       <div id="treeStrappi"  class="fixed pt-28 pl-5"></div>
+     </div>
+    <canvas id="vascan" class="w-100 h-full" >
        
-       <div class="pl-5">
-          <div id="disappear" class="absolute text-center"></div>
-          <div id="treeName" class="fixed pt-20 pl-5"></div>
-          <div id="treeStrappi"  class="fixed pt-28 pl-5"></div>
-        </div>
-        
-        
-        
+ 
         <script src="/public/index.js"></script>
         <script src="/public/03_globe/js/OrbitControls.js"></script>
         <script src="/public/03_globe/js/sphere.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
        
      </canvas>
-</content>
   </body>
 </html>
