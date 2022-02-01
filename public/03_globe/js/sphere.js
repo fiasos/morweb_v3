@@ -29,6 +29,23 @@ function init() {
   );
   camera.position.x = -10;
 
+  // Draw a line from pointA in the given direction at distance 100
+  var pointA = new THREE.Vector3(0, 0, 0);
+  var direction = new THREE.Vector3(10, 0, 0);
+  direction.normalize();
+
+  var distance = 100; // at what distance to determine pointB
+
+  var pointB = new THREE.Vector3();
+  pointB.addVectors(pointA, direction.multiplyScalar(distance));
+
+  var geometry = new THREE.Geometry();
+  geometry.vertices.push(pointA);
+  geometry.vertices.push(pointB);
+  var material = new THREE.LineBasicMaterial({ color: 0xff0000 });
+  var line = new THREE.Line(geometry, material);
+  scene.add(line);
+
   //  SCENA
   scene = new THREE.Scene();
 
