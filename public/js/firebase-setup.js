@@ -40,12 +40,18 @@ async function firebaseSetup() {
   const trees_ref = ref(myDatabase, "trees");
   console.log("greetings_ref:", trees_ref);
 
-  //    Function to retrieve the greetings
-  // onValue(ref, function) monitors a ref
+  //  Function to retrieve the greetings
+  //  onValue(ref, function) monitors a ref
   //  Snapshot value of the ref in that moment
   onValue(trees_ref, (snapshot) => {
     allTrees = snapshot.val();
     console.log("allTrees:", allTrees);
+  });
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 5000);
   });
 }
 
