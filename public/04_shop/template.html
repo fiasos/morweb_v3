@@ -151,11 +151,15 @@
     <content id="all">
 
     <!--Titolo-->
-    <div id="titolo" class="text-center w-screen text-verde top-1/2 my-14 xxs:my-10"></div>
+    <div class="text-center w-screen text-verde top-1/2 my-14 xxs:my-10">
+      <h1 id="titolo" class="font-cronos font-bold md:text-6xl xxs:text-5xl"> </h1> 
+      <h2 id="provenienza" class="font-cronos font-semibold md:text-4xl xxs:text-3xl"> </h2>
+    </div>
 
     <!--Slideshow container-->
     <div class="jscontainer">
-        <div id="slides" class="myslides">
+        <div class="myslides">
+          <img id="slide" src="" style="width: 100%">
         </div>
 
         <!-- Bottoni avanti e indietro-->
@@ -164,7 +168,14 @@
     </div>
 
     <!--info-->
-   <div id="info" class="my-6 text-center"></div>
+    <div class="my-6 text-center">
+      <!-- <span class="block text-verdebase text-xl mb-3">Base</span> -->
+      <span id="prezzo" class="block text-xl font-medium leading-5">€ --</span>
+      <span class="block text-lg font-light">per sheet</span>
+      <div class="my-6">
+          <a href="/public/06_project/project.html" class="button">Subscribe</a>
+      </div>
+      </div>
 
       <!-- Tab links -->
           <div class="lg:mx-32 md:mx-24">
@@ -179,7 +190,40 @@
         <!-- Tab content -->
 
             <!--1 Descrizione-->
-                <div id="descrizione" class="tabcontent"></div>
+                <div class="tabcontent"></div>
+                <div class="py-8">
+                  <div class="flex flex-row justify-between"> 
+                     <div>
+                        <span id="titolett" class="titoletto">--</span>
+                           <a href="/public/03_globe/globe.html">
+                            <ul class="py-3">
+                              <li id="forest" class="hover:underline">Ancient Forest,--</li> 
+                              <li id="lat">Lat</li>
+                              <li id="lng">Lng</li>
+                            </ul> 
+                        </a>
+                        <span id="descrizione" class="paragrafo">Desc</span>
+                        <div class="pt-16">
+                              <span class="titoletto">Scientific classification</span>
+                              <div class="py-3 flex flex-row sm:flex-wrap">
+                                <ul class="font-medium pr-14 ">
+                                 <li>Bionomial name</li>
+                                 <li>Order</li> 
+                                 <li>Family</li>
+                                 <li>Genus</li>
+                                </ul> 
+                                <ul>
+                                  <li>Acer saccharum</li>
+                                  <li>Sapindales</li>
+                                  <li>Sapindaceae</li>
+                                  <li>Acer</li>
+                                </ul>
+                              </div>
+                        </div>                           
+                     </div>
+                      <img id="foto" class="w-auto h-140 pl-20 xxs:hidden md:inline-block" src="">
+                  </div>
+                </div>
 
               <!--2 Key features-->
               <div id="features" class="tabcontent">
@@ -218,15 +262,17 @@
             
             <!--Collegamento Globo-->
             <div id="banner" class="flex bg-verde lg:h-120 text-whike items:center justify-between xxs:h-80 mt-10">
-                <div id="banner_testo" class=" m-auto text-center top-1/2 left-1/2o w-auto">
-                  <h2 class="block md:text-2xl sm: text-xl font-medium">OUR BEST REVIEW IS YOUR SATISFACTION</h2>
-                  <h1 class="font-thin md:text-lg sm:text-base">Discover how many people love this tree</h1>
-                  <div class="p-10">
-                   <a  href="/public/03_globe/globe.html">
-                      <h1 id="link_banner" class="text-verdebase font-thin md:text-lg sm:text-base xxs:text-lg hover:underline">View the community</h1>
-                   </a>
-                  </div>
+              <img id="sx" src="" alt="" class="xxs:hidden sm:inline-block">
+              <div id="banner_testo" class=" m-auto text-center top-1/2 left-1/2o w-auto">
+                <h2 class="block md:text-2xl sm: text-xl font-medium">OUR BEST REVIEW IS YOUR SATISFACTION</h2>
+                <h1 class="font-thin md:text-lg sm:text-base">Discover how many people love this tree</h1>
+                <div class="p-10">
+                  <a  href="/public/03_globe/globe.html">
+                    <h1 id="link_banner" class="text-verdebase font-thin md:text-lg sm:text-base xxs:text-lg hover:underline">View the community</h1>
+                  </a>
                 </div>
+              </div>
+              <img id="dx" src="" alt="" class="xxs:hidden sm:inline-block">
             </div>
     
     <!--FOOTER-->
