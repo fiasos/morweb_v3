@@ -13,14 +13,13 @@ function loadCards() {
           prezzo = 0.04;
           colore = "verdebase";
           break;
-
         case "regular":
           prezzo = 0.08;
-          colore = "regular";
+          colore = "gialloregular";
           break;
         case "premium":
           prezzo = 0.12;
-          colore = "premium";
+          colore = "aranciopremium";
           break;
       }
 
@@ -29,22 +28,20 @@ function loadCards() {
 
       const a = document.createElement("a");
       //TODO Mettere Query ID albero
-      const URL = `/public/04_shop/template.html?id=${t.id}`;
+      const URL = `/public/04_shop/roll.html?id=${t.id}`;
       a.setAttribute("href", URL);
       const tree_id = 1;
       const img = document.createElement("img");
       img.setAttribute("src", `/public/04_shop/01_img/01_rolls/${tree_id}.png`);
       img.setAttribute("alt", `${t.type}`);
-      img.setAttribute("class", `m-auto py-4 w-40`);
+      img.setAttribute("class", `m-auto py-2 w-40`);
       const div_text = document.createElement("div");
       div_text.setAttribute("class", `m-4 text-center`);
-      div_text.innerHTML = `<span class="font-semibold text-2xl">${
-        t.type
-      }</span>
+      div_text.innerHTML = `<p class="font-semibold text-2xl h-16">${t.type}</p>
           <span class="block ${colore} font-light text-lg ">${capitalizeFirstLetter(
         t.class
       )}</span>
-          <span class="block text-lg font-medium leading-5 pt-3">€${prezzo}</span>
+          <span class="block text-lg font-medium leading-5 pt-3">${prezzo} €</span>
           <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
           <a href="/public/06_project/project.html" class="button">Subscribe</a>`;
 

@@ -8,23 +8,32 @@
 @tailwind utilities;
 
 .card {
-  @apply rounded bg-lime-300 
-  shadow-md overflow-hidden h-fit w-72 p-2 mx-auto xxs:my-6;
+  @apply rounded w-64 
+ overflow-hidden h-108 px-2 mx-auto;
 }
 
 .button {
   @apply rounded-full 
-  py-3 px-10 uppercase font-medium text-lg cursor-pointer bg-verde text-whike;
-}
-
-[role="tab"].active {
-  @apply text-red-600 border-red-600 dark:text-red-500 dark:border-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-500 dark:hover:border-red-500;
+  py-3 px-10 uppercase font-medium text-lg cursor-pointer bg-verde text-whike hover:scale-105;
 }
 
 .titoletto {
-  @apply font-bold  xxs:text-lg;
+  @apply font-bold xxs:text-lg;
 }
 
 .paragrafo {
   @apply block py-3 font-normal;
 }
+
+.rotolini {
+  @apply w-12 hover:scale-110  hover:ease-in duration-150;
+}
+
+/* .tab-button {
+  @apply text-grigioscuro block overflow-hidden
+  hover:text-verde pr-20 py-2;
+} */
+
+/* .tabcontent {
+  @apply hidden py-4;
+} */

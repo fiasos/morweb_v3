@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="w-screen h-screen">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mor</title>
+    <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
+    <link href="/src/styles.css" rel="stylesheet" />
+    <link href="/public/styles.css" rel="stylesheet" />
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Rubik-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!--Cronos-->
+    <link rel="stylesheet" href="https://use.typekit.net/com5nvg.css">
+
+    <!-- DATABASE -->
+    <script src="/public/js/firebase-setup.js"></script>
+
+  </head>
+
+  <body class="font-rubik text-whike bg-verde min-h-screen overflow-x-hidden">
+    <header id="header">
+      <!--Bar: LOGO E MENU-->
+      <nav>
+        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 bg-verde z-10" >
+          
+          <!--Logo-->
+          <div class="flex-grow">
+            <a href="/public/index.html">
+              <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
+            </a>
+          </div>
+
+          <!--Icona account-->
+          <div class="ph:pr-2 md:pr-4">
+            <a href="/public/07_account/login.html" >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </a >
+          </div>
+
+          <!--Icona menu-->
+            <div id="burger">
+              <div class="flex flex-col justify-center">
+                <div class="relative py-2 sm:max-w-xl mx-auto">
+                    <nav x-data="{ open: false }">
+                        <button id="change" class="w-10 h-10 relative focus:outline-none" @click="open = !open">
+                                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                                <span aria-hidden="true" class="rounded block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                                <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                                <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                            </div>
+                        </button>
+                    </nav>
+                </div>
+              </div>
+              </svg>
+            </div>
+        </div>
+
+        <!--Voci menù-->
+        <div class="hidden" id="sfondo"> 
+            <div class="grid place-items-center h-152" >
+              <ul class="hidden text-center object-center font-medium text-xl leading-9" id="menu">
+              <li><a href="/public/index.html">HOME</a></li>
+              <li><a href="discover.html">DISCOVER</a></li>
+              <li><a href="/public/03_globe/globe.html">GLOBE</a></li>
+              <li><a href="/public/04_shop/shop.html">SHOP</a></li>
+              <li><a href="/public/05_about/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+
+
+<!--CONTENT-->
+  <content id="all">
+
+    <!-- Render Treem -->
+    <!-- TODO: video olli -->
+    <video autoplay loop muted class="mt-0 h-auto w-full"> 
+     <source src="/public/assets/02_video/mor_film.mp4">
+    </video>
+    <!--Pittogrammi-->
+    <!-- TODO: alessio help -->
+    <div class="my-20">
+        <p class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl text-center">As simple ass..</p>
+        <div>
+        
+        </div>
+        
+    </div>
+    <!--Display Treem-->
+    <!-- TODO: video olli -->
+    <!--How it works?-->
+    <div class="my-20 ph:mx-14 md:mx-40">
+        <span class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl">How can I get it?</span>
+        <div class="lg:text-2xl md:text-base font-light md:my-20 ph:my-10">
+            <ul class="lg:pl-108 md:pl-80">
+                <div class="my-3">
+                    <li><span class="font-medium">  1 - Choose</span></li> 
+                    <li>Check out our paper selection and choose your favourite kind. </li>
+                </div>
+                <div class="my-3">
+                    <li><span class="font-medium">  2 - Subscribe</span></li> 
+                    <li>Did you find it? Great, please sign up and subscribe to get it.</li>
+                </div>
+                <div class="my-3">
+                    <li><span class="font-medium">  3 - Wait</span></li> 
+                    <li>All done: Treem is coming with your first box. Don’t worry, our specialist is going to set it up for you!</li>
+                </div>
+            </ul>
+        </div>                   
+    </div>          
+    <!--What if ends?-->
+    <!-- TODO: ci starebbe animazione rotolo finito -->
+    <div class="my-20 ph:mx-14 md:mx-40">
+        <span class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl">What if I run out of toilet paper?</span>
+        <div class="lg:text-2xl md:text-base font-light md:my-20 ph:my-10">
+            <ul class="lg:pl-108 md:pl-80">
+                <div class="my-3">
+                    <li><span class="font-medium">  1 - Check</span></li> 
+                    <li>Treem will tell you when your roll is about to end.</li>
+                </div>
+                <div class="my-3">
+                    <li><span class="font-medium">  2 - Order</span></li> 
+                    <li>You can order new rolls directly from Treem or Mor website.</li>
+                </div>
+                <div class="my-3">
+                    <li><span class="font-medium">  3 - Install</span></li> 
+                    <li>The box will be delivered to your door, just install a new roll on your device.</li>
+                </div>
+            </ul>
+        </div>                   
+    </div>   
+    
+
+
+  </content>
+    
+  
+    
+    <script src="/public/js/index.js"></script>
+    <!--Animazione hamburger-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    
+  </body>
+</html>
+
+
+
+
+
+ 

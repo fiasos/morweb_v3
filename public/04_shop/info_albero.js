@@ -56,7 +56,7 @@ function loadInfo() {
 
     //  Descrizione
     titoletto.innerHTML = tree.type;
-    forest.innerHTML = `Ancient Forest, ${tree.provenienza}`;
+    forest.innerHTML = `${tree.provenienza}`;
     lat.innerHTML = tree.lat;
     lng.innerHTML = tree.lng;
     descrizione.innerHTML = tree.descrizione;
