@@ -1,4 +1,3 @@
-let trees_loaded = false;
 let cardContainer = document.getElementById("card-container");
 console.log("cardContainer:", cardContainer);
 

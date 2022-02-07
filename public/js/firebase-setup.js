@@ -1,6 +1,8 @@
 console.log("Firebase fired!");
 
 let allTrees; // Contains all Trees
+let allUsers; // Contains all Trees
+// let rotoli_usati; // Contains all Trees
 let updateStrappi; //  add a msg to the DB
 
 // Load and initialize Firebase
@@ -39,6 +41,8 @@ async function firebaseSetup() {
   //Reference to a specific property of the database
   const trees_ref = ref(myDatabase, "trees");
   console.log("greetings_ref:", trees_ref);
+  const user_ref = ref(myDatabase, "user");
+  const usati_ref = ref(myDatabase, "user/rotoli_usati");
 
   //  Function to retrieve the greetings
   //  onValue(ref, function) monitors a ref
@@ -47,6 +51,13 @@ async function firebaseSetup() {
     allTrees = snapshot.val();
     console.log("allTrees:", allTrees);
   });
+  onValue(user_ref, (snapshot) => {
+    allUsers = snapshot.val();
+    console.log("allTrees:", allUsers);
+  });
+  // onValue(usati_ref, (snapshot) => {
+  //   rotoli_usati = snapshot.val();
+  // });
 
   return new Promise((resolve) => {
     setTimeout(() => {

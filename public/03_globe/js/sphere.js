@@ -55,8 +55,8 @@ function init() {
   controls.minDistance = 7;
   controls.maxDistance = 20;
   controls.enableDamping = true;
-  controls.autoRotate = false;
-  controls.autoRotateSpeed = 0.3;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 0.4;
   container.appendChild(renderer.domElement);
 
   document.addEventListener("mousemove", onMouseMove);
@@ -155,4 +155,13 @@ function render() {
 
   controls.update();
   renderer.render(scene, camera);
+}
+
+window.addEventListener("resize", onWindowResize, false);
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
