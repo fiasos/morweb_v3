@@ -18,10 +18,19 @@
 
     <!-- DATABASE -->
     <script src="/public/js/firebase-setup.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
   </head>
 
+
   <body class="font-rubik text-verde bg-whike min-h-screen overflow-x-hidden">
+    <!-- caricamento pagina -->
+    <div id="top-player" class="h-screen w-screen bg-verde z-20 fixed flex">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_j6tz3fsc.json" speed="1" class="flex content-center w-152 h-152 mx-auto my-auto pt-20" loop autoplay></lottie-player>
+    </div>
+      
+    
     <header id="header">
       <!--Bar: LOGO E MENU-->
       <nav>
@@ -172,6 +181,11 @@
     <!--Animazione hamburger-->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="/public/04_shop/Card.js"></script>
+
+
+
+
+
 
   </body>
 </html>

@@ -1,5 +1,7 @@
+let top_player = document.getElementById("top-player");
 let trees_loaded = false;
 let cardContainer = document.getElementById("card-container");
+
 console.log("cardContainer:", cardContainer);
 
 function loadCards() {
@@ -15,11 +17,11 @@ function loadCards() {
           break;
         case "regular":
           prezzo = 0.08;
-          colore = "gialloregular";
+          colore = "regular";
           break;
         case "premium":
           prezzo = 0.12;
-          colore = "aranciopremium";
+          colore = "premium";
           break;
       }
 
@@ -30,9 +32,8 @@ function loadCards() {
       //TODO Mettere Query ID albero
       const URL = `/public/04_shop/roll.html?id=${t.id}`;
       a.setAttribute("href", URL);
-      const tree_id = 1;
       const img = document.createElement("img");
-      img.setAttribute("src", `/public/04_shop/01_img/01_rolls/${tree_id}.png`);
+      img.setAttribute("src", `/public/04_shop/01_img/01_rolls/${t.id}.png`);
       img.setAttribute("alt", `${t.type}`);
       img.setAttribute("class", `m-auto py-2 w-40`);
       const div_text = document.createElement("div");
@@ -54,6 +55,8 @@ function loadCards() {
       trees_loaded = true;
     });
   } else if (!trees_loaded) setTimeout(loadCards(), 5000);
+
+  top_player.classList.toggle("invisible");
 }
 
 async function asyncCall() {

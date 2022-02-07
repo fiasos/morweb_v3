@@ -55,8 +55,8 @@ function init() {
   controls.minDistance = 7;
   controls.maxDistance = 20;
   controls.enableDamping = true;
-  controls.autoRotate = false;
-  controls.autoRotateSpeed = 0.3;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 0.4;
   container.appendChild(renderer.domElement);
 
   document.addEventListener("mousemove", onMouseMove);

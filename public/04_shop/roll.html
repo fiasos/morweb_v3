@@ -18,6 +18,7 @@
    
     <!-- DATABAE -->
     <script src="/public/js/firebase-setup.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   </head>
 
@@ -76,14 +77,19 @@
   </style>
 
 
-  <body class="font-rubik text-verde bg-whike overflow-x-hidden">
-    <!-- margini nobody -->
-    <div class="ph:px-6 md:px-9">
+  <body class="font-rubik text-verde bg-whike min-h-screen overflow-x-hidden">
+  
+  <!-- caricamento pagina -->
+    <div id="top-player" class="h-screen w-screen bg-verde z-30 fixed flex">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_j6tz3fsc.json" speed="1" class="flex content-center w-152 h-152 mx-auto my-auto pt-20" loop autoplay></lottie-player>
+    </div>
+      
 
     <header id="header">
       <!--Bar: LOGO E MENU-->
       <nav>
         <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 bg-whike z-10" >
+          
           <!--Logo-->
           <div class="flex-grow">
             <a href="/public/index.html">
@@ -91,30 +97,31 @@
             </a>
           </div>
           <!--Icona account-->
-          <div class="xxs:pr-2 md:pr-4">
+          <div class="ph:pr-2 md:pr-4">
             <a href="/public/07_account/login.html" >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </a >
           </div>
+
           <!--Icona menu-->
-            <div class="cursor-pointer" id="burger">
-              <div class="flex flex-col justify-center">
-                <div class="relative py-2 sm:max-w-xl mx-auto">
-                    <nav x-data="{ open: false }">
-                        <button id="change" class="text-verde w-10 h-10 relative focus:outline-none" @click="open = !open">
-                                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
-                                <span aria-hidden="true" class="rounded block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-                                <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
-                                <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
-                            </div>
-                        </button>
-                    </nav>
-                </div>
+          <div id="burger">
+            <div class="flex flex-col justify-center">
+              <div class="relative py-2 sm:max-w-xl mx-auto">
+                  <nav x-data="{ open: false }">
+                      <button id="change" class="text-verde w-10 h-10 relative focus:outline-none" @click="open = !open">
+                              <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                              <span aria-hidden="true" class="rounded block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                              <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                              <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                          </div>
+                      </button>
+                  </nav>
               </div>
-              </svg>
             </div>
+            </svg>
+          </div>
         </div>
         <!--Voci menù-->
         <div class="hidden" id="sfondo"> 
@@ -131,10 +138,10 @@
 
       </nav>
     </header>
-    </div>
+ 
 
 <!--CONTENT-->
-      <content id="all">
+  <content id="all" class="hidden">
       <div class="lg:mx-32 xxs:mx-16">
 
           <!--Titolo-->
@@ -163,8 +170,8 @@
           <!-- Tab links -->
           <div class="tab">
             <ul class="flex flex-col md:flex-row list-none border-b border-verde whitespace-nowrap ml-auto ph:pt-8 xxs:pt-0">
-              <button class="tablinks block" onclick="openTab(event, 'presentazione')" id="defaultOpen"> FULL DESCRIPTION</button>
-              <button class="tablinks block" onclick="openTab(event, 'features')">KEY FEATURES</button>
+              <button class="tablinks block" onclick="openTab(event, 'presentazione')" id="defaultOpen" > FULL DESCRIPTION</button>
+              <button class="tablinks block" onclick="openTab(event, 'features')" >KEY FEATURES</button>
               <button class="tablinks block" onclick="openTab(event, 'dettagli')">DETAILS</button>
             </ul>
           </div>
@@ -195,10 +202,10 @@
                                 <li>Genus</li>
                               </ul> 
                               <ul>
-                                <li>Acer saccharum</li>
-                                <li>Sapindales</li>
-                                <li>Sapindaceae</li>
-                                <li>Acer</li>
+                                <li id="b-name">--</li>
+                                <li id="order">--</li>
+                                <li id="family">--</li>
+                                <li id="genus">--</li>
                               </ul>
                             </div>
                         </div>                           
@@ -212,20 +219,24 @@
               <!--2 Key features-->
               <div id="features" class="tabcontent">
                 <div class="py-8">
-                  <div class="grid m-auto md:grid-cols-4 xxs:grid-cols-2 ph:grid-cols-1 text-center">
-                    <div>Softness</div>
+                  <div id="keys" class="grid xl:mx-80 lg:xm-60 md:mx-32 sm:mx-24  md:grid-cols-4 xxs:grid-cols-2 ph:grid-cols-1 text-center">
+                    <!-- <div class="m-auto">
+                      <img class="w-24 my-3" src="/public/04_shop/01_img/05_features/2.svg">
+                      <div>Softness</div>
+                    </div>
+
                     <div>Resistence</div>
                     <div>Thickness</div>
-                    <div>Absorbency</div>
+                    <div>Absorbency</div> -->
                   </div>
                   
-                  <div class="pt-9 border-b border-grigioscuro">Compare similar rolls</div>
+                  <!-- <div class="pt-9 border-b border-grigioscuro">Compare similar rolls</div>
                     <div class="grid m-auto md:grid-cols-4 xxs:grid-cols-2 ph:grid-cols-1 text-center">
                       <div>Softness</div>
                       <div>Resistence</div>
                       <div>Thickness</div>
                       <div>Absorbency</div>
-                    </div>
+                    </div> -->
                 </div>
               </div>
               <!--3 Details-->
@@ -269,7 +280,7 @@
           <h1 class="font-thin md:text-lg sm:text-base">Discover how many people love this tree</h1>
           <div class="p-10">
             <a  href="/public/03_globe/globe.html">
-              <h1 id="link_banner" class="text-verdebase font-thin md:text-lg sm:text-base xxs:text-lg hover:underline">View the community</h1>
+              <h1 id="link_banner" class="font-thin md:text-lg sm:text-base xxs:text-lg hover:underline">View the community</h1>
             </a>
           </div>
         </div>
