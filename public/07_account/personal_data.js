@@ -11,7 +11,6 @@ function loadUsers() {
 
     for (let key in rotoli_usati) {
       const roll = rotoli_usati[key];
-      console.log("roll:", roll);
       const id = roll.id - 1;
       const from = roll.from;
       const to = roll.to;
