@@ -2,6 +2,7 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     screens: {
+      ph: "350px",
       xxs: "500px",
       sm: "640px",
       md: "768px",
@@ -25,9 +26,15 @@ module.exports = {
         din: ["din-2014", "sans-serif"],
       },
       spacing: {
+        18: "4.5rem",
+        108: "27rem",
         120: "30rem",
         140: "35rem",
         152: "38rem",
+        300: "75rem",
+      },
+      borderWidth: {
+        16: "1rem",
       },
     },
   },

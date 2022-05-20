@@ -13,10 +13,6 @@ raycaster = new THREE.Raycaster();
 init();
 animate();
 
-// //  Titolo
-// let title = document.getElementById("disappear");
-// title.innerHTML += "Discover our trees";
-
 function init() {
   container = document.createElement("div");
   document.body.appendChild(container);
@@ -60,7 +56,7 @@ function init() {
   controls.maxDistance = 20;
   controls.enableDamping = true;
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 3;
+  controls.autoRotateSpeed = 0.4;
   container.appendChild(renderer.domElement);
 
   document.addEventListener("mousemove", onMouseMove);
@@ -83,7 +79,7 @@ function addPoints() {
     );
     mesh.name = i;
     mesh.tear = i;
-    mesh.description = i;
+    mesh.where = i;
 
     mesh.position.set(start.x, start.y, start.z);
     sphere.add(mesh);
@@ -139,17 +135,33 @@ function render() {
       let treeTear = INTERSECTED.tear;
       document.getElementById("treeStrappi").innerHTML =
         "Sheets:  " + trees[treeTear].strappi;
+      //Provenienza
+      let treeStato = INTERSECTED.where;
+      document.getElementById("treeStato").innerHTML =
+        trees[treeStato].provenienza;
+
       console.log(trees[treeIndex].strappi);
       console.log(trees[treeTear].type);
+      console.log(trees[treeStato].provenienza);
     }
   } else {
     if (INTERSECTED)
       //  Scale down
       INTERSECTED.scale.x = INTERSECTED.scale.y = INTERSECTED.scale.z = 1;
     document.getElementById("treeName").innerHTML = null;
+    document.getElementById("treeStato").innerHTML = null;
     document.getElementById("treeStrappi").innerHTML = null;
   }
 
   controls.update();
   renderer.render(scene, camera);
+}
+
+window.addEventListener("resize", onWindowResize, false);
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }

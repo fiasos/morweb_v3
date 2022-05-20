@@ -1,15 +1,13 @@
-<!-- npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch -->
-
 <!DOCTYPE html>
-<html>
+<html class="w-screen h-screen">
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mor</title>
     <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
-    <link href="../src/styles.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="/src/styles.css" rel="stylesheet" />
+    <link href="/public/styles.css" rel="stylesheet" />
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,23 +15,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
     <!--Cronos-->
     <link rel="stylesheet" href="https://use.typekit.net/com5nvg.css">
+
+    <!-- DATABASE -->
+    <script src="/public/js/firebase-setup.js"></script>
+
   </head>
 
-  <body class="font-rubik bg-verde text-whike overflow-x-hidden">
-     <header id="header">
+  <body class="font-rubik text-verde bg-whike overflow-x-hidden">
+    <header id="header">
       <!--Bar: LOGO E MENU-->
       <nav>
-        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 bg-verde z-20" >
-        
+        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 bg-whike z-10" >
+          
           <!--Logo-->
           <div class="flex-grow">
-            <a href="index.html">
-              <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
+            <a href="/public/index.html">
+              <img src="/public/assets/01_img/Logo/Logo_Mor_Green.svg" class="w-24">
             </a>
           </div>
 
           <!--Icona account-->
-          <div class="ph:pr-2 md:pr-4">
+          <div class="xxs:pr-2 md:pr-4">
             <a href="/public/07_account/login.html" >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -42,11 +44,11 @@
           </div>
 
           <!--Icona menu-->
-            <div class="cursor-pointer" id="burger">
+            <div id="burger">
               <div class="flex flex-col justify-center">
                 <div class="relative py-2 sm:max-w-xl mx-auto">
                     <nav x-data="{ open: false }">
-                        <button id="change" class="text-whike w-10 h-10 relative focus:outline-none" @click="open = !open">
+                        <button id="change" class="text-verde w-10 h-10 relative focus:outline-none" @click="open = !open">
                                 <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
                                 <span aria-hidden="true" class="rounded block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
                                 <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
@@ -64,7 +66,7 @@
         <div class="hidden" id="sfondo"> 
             <div class="grid place-items-center h-152" >
               <ul class="hidden text-center object-center font-medium text-xl leading-9" id="menu">
-              <li><a href="index.html">HOME</a></li>
+              <li><a href="/public/index.html">HOME</a></li>
               <li><a href="/public/02_discover/discover.html">DISCOVER</a></li>
               <li><a href="/public/03_globe/globe.html">GLOBE</a></li>
               <li><a href="/public/04_shop/shop.html">SHOP</a></li>
@@ -72,49 +74,34 @@
             </ul>
           </div>
         </div>
-      </nav>
-     </header>
- 
- 
-   <!--CONTENT-->
-    <content id="all">
+    </nav>
+  </header>
 
-      <!--VIDEO-->
-        <div class="fixed h-screen w-screen overflow-hidden">
-          <video autoplay loop muted class="object-cover"> 
-            <source src="/public/assets/02_video/mor_film.mp4">
-          </video>
-        </div>      
-        
-       <div >
-          <!-- Payoff -->
-          <div class="h-screen">
-            <div class="absolute w-full m-auto text-center flex-col bg-verde bg-opacity-30">
-              <h1 class="py-300 font-cronos font-bold text-center ph:text-4xl md:text-5xl lg:text-7xl">Nature at your feet</h1>
-            </div>  
-          </div>
-          <!-- PARAGRAFO PRESENTAZIONE -->
-          <div class="pt-152 w-screen h-screen z-10 lg:px-96 ph:px-16 block relative ">
-            <div class="ph:w-auto text-xl ph:text-2xl font-light">In classical Greece, one word was used to indicate the action of making or doing: tèchne. Over the centuries though, this concept evolved in various forms. 
-              With technology, industry slowly started to walk away from the cure and devoted attention of actual craftsmanship, preferring quantity over quality. 
-              But industry doesn’t necessarily have to equal “low quality”. Actually, quite the opposite can be true as well: Mor is here to prove it.
-              With the essence of nature, the design of humans and the power of machinery, Mor produces high quality products that are made to be valued and appreciated. 
-              In the hard process of extracting the complexity of nature, accurately selecting raw materials, as well as searching for top-notch quality and creativity in each and every stage of the production is not only necessary, but mandatory. Compromising on you, can’t be a compromise.
-            </div> 
-         </div>
-       </div>
 
-      
-    <!--FOOTER-->
- 
-     
-      </content>
+<!--CONTENT-->
+  <content id="all">
+      <div class="justify-center m-auto mt-64 w-fit relative">  
+            <input placeholder="Username" width="50" class="bg-grigiochiaro text-center rounded-full py-2 my-2"><br>
+            <input width="50" class="bg-grigiochiaro text-center rounded-full py-2" type="password" maxlength="12" value="Bella"> 
+            
+            <a href="/public/07_account/personal_area.html">
+              <button class="my-5 py-2 block w-fit m-auto text-center rounded-full            
+              text-verde bg-whike border-2 border-verde
+              hover:bg-verde hover:text-whike px-6 hover:scale-110">LOGIN</button>
+            </a>
+
+           <span class="flex justify-center m-auto w-fit text-center text-sm underline align-center">Forgot your password?</span> 
+      </div>
+  
+ </content>
 
 
 
     <script src="/public/js/index.js"></script>
     <!--Animazione hamburger-->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="/public/04_shop/Card.js"></script>
+
   </body>
 </html>
 
