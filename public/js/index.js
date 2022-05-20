@@ -7,17 +7,22 @@ const header = document.querySelector("#header");
 const vascan = document.querySelector("#vascan");
 
 burger.addEventListener("click", () => {
-  if (menu.classList.contains("hidden")) {
-    sfondo.classList.remove("hidden");
-    menu.classList.remove("hidden");
-    all.classList.add("hidden");
-    vascan.classList.add("hidden");
-  } else {
-    menu.classList.add("hidden");
-    sfondo.classList.add("hidden");
-    all.classList.remove("hidden");
-    vascan.classList.remove("hidden");
-  }
+  // if (menu.classList.contains("hidden")) {
+  //   sfondo.classList.remove("hidden");
+  //   menu.classList.remove("hidden");
+  //   all.classList.add("hidden");
+  //   vascan.classList.add("hidden");
+  // } else {
+  //   menu.classList.add("hidden");
+  //   sfondo.classList.add("hidden");
+  //   all.classList.remove("hidden");
+  //   vascan.classList.remove("hidden");
+  // }
+
+  menu.classList.toggle("hidden");
+  sfondo.classList.toggle("hidden");
+  all.classList.toggle("hidden");
+  vascan.classList.toggle("hidden");
 });
 
 // TABS

@@ -6,6 +6,8 @@ let currentSlide = 0;
 
 let immagini = [];
 
+let c = document.getElementById("all");
+let top_player = document.getElementById("top-player");
 let titolo = document.getElementById("titolo");
 let provenienza = document.getElementById("provenienza");
 let slide = document.getElementById("slide");
@@ -19,9 +21,16 @@ let foto = document.getElementById("foto");
 let dx = document.getElementById("dx");
 let sx = document.getElementById("sx");
 let link_banner = document.getElementById("link_banner");
+let keys = document.getElementById("keys");
+let b_name = document.getElementById("b-name");
+let order = document.getElementById("order");
+let family = document.getElementById("family");
+let genus = document.getElementById("genus");
 
 function loadInfo() {
+  // console.log("top_player:", top_player);
   if (allTrees) {
+    console.log("allTrees:", allTrees);
     const tree = allTrees[id - 1];
     let prezzo = 0;
     let colore = "";
@@ -52,7 +61,7 @@ function loadInfo() {
     immagini = [`${URL_img}/a.jpg`, `${URL_img}/b.jpg`, `${URL_img}/c.jpg`];
 
     //  prezzo
-    prezzo_span.innerHTML = `€ ${prezzo}`;
+    prezzo_span.innerHTML = `${prezzo} €`;
 
     //  Descrizione
     titoletto.innerHTML = tree.type;
@@ -62,7 +71,30 @@ function loadInfo() {
     descrizione.innerHTML = tree.descrizione;
     foto.setAttribute("src", `01_img/03_trees/${tree.id}.jpg `);
 
-    //   features.innerHTML = "BellaAA"
+    //  Classificazione scientifica
+    b_name.innerHTML = tree.bionomial_name;
+    order.innerHTML = tree.order;
+    family.innerHTML = tree.family;
+    genus.innerHTML = tree.genus;
+
+    const features = ["softness", "resistence", "thickness", "absorbency"];
+    //Adding keys
+    features.forEach((f, index) => {
+      const card = document.createElement("div");
+      card.setAttribute("class", "m-auto");
+      const img = document.createElement("img");
+      img.setAttribute("class", `w-24 my-3`);
+      const value = tree[f];
+      img.src = `/public/04_shop/01_img/05_features/${value}.svg`;
+      const tag = capitalizeFirstLetter(f);
+      const diva = document.createElement("div");
+      diva.innerHTML = tag;
+
+      card.appendChild(img);
+      card.appendChild(diva);
+
+      keys.appendChild(card);
+    });
 
     const URL_texture = `/public/04_shop/01_img/04_texture/${tree.id}`;
     sx.setAttribute("src", `${URL_texture}/sx.svg`);
@@ -70,12 +102,14 @@ function loadInfo() {
     dx.setAttribute("src", `${URL_texture}/dx.svg`);
     dx.setAttribute("alt", `${tree.type}`);
 
-    //! Non cambia colore
     link_banner.setAttribute(
       "class",
       `text-${colore} font-thin md:text-lg sm:text-base xxs:text-lg hover:underline`
     );
   }
+
+  c.classList.toggle("hidden");
+  top_player.classList.toggle("invisible");
 }
 
 async function asyncCall() {
@@ -109,4 +143,8 @@ function showSlide() {
   let imageFile = immagini[currentSlide];
   let imgTag = document.getElementById("slide");
   imgTag.src = imageFile;
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }

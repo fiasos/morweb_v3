@@ -1,7 +1,7 @@
 <!-- npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch -->
 
 <!DOCTYPE html>
-<html>
+<html class="w-screen h-screen">
 
   <head>
     <meta charset="UTF-8" />
@@ -31,7 +31,6 @@
               <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
             </a>
           </div>
-
           <!--Icona account-->
           <div class="ph:pr-2 md:pr-4">
             <a href="/public/07_account/login.html" >
@@ -40,7 +39,6 @@
               </svg>
             </a >
           </div>
-
           <!--Icona menu-->
             <div class="cursor-pointer" id="burger">
               <div class="flex flex-col justify-center">
@@ -59,7 +57,6 @@
               </svg>
             </div>
         </div>
-
         <!--Voci menù-->
         <div class="hidden" id="sfondo"> 
             <div class="grid place-items-center h-152" >
@@ -80,32 +77,48 @@
     <content id="all">
 
       <!--VIDEO-->
-        <div class="fixed h-screen w-screen overflow-hidden">
-          <video autoplay loop muted class="object-cover"> 
-            <source src="/public/assets/02_video/mor_film.mp4">
-          </video>
-        </div>      
-        
-       <div >
-          <!-- Payoff -->
-          <div class="h-screen">
-            <div class="absolute w-full m-auto text-center flex-col bg-verde bg-opacity-30">
-              <h1 class="py-300 font-cronos font-bold text-center ph:text-4xl md:text-5xl lg:text-7xl">Nature at your feet</h1>
+        <div class="relative">
+          <!-- h-screen nel div -->
+            <div class="h-screen w-full">
+               <video class="h-full w-screen object-cover" autoplay loop muted><source src="/public/assets/02_video/mor_film.mp4"></video>
+            </div>          
+            <!-- Payoff -->
+            <div class="absolute top-1/2 h-screen w-screen m-auto">
+              <h1 class="font-cronos font-semibold text-center ph:text-6xl md:text-7xl lg:text-8xl">Nature at your feet</h1>
             </div>  
-          </div>
-          <!-- PARAGRAFO PRESENTAZIONE -->
-          <div class="pt-152 w-screen h-screen z-10 lg:px-96 ph:px-16 block relative ">
-            <div class="ph:w-auto text-xl ph:text-2xl font-light">In classical Greece, one word was used to indicate the action of making or doing: tèchne. Over the centuries though, this concept evolved in various forms. 
-              With technology, industry slowly started to walk away from the cure and devoted attention of actual craftsmanship, preferring quantity over quality. 
-              But industry doesn’t necessarily have to equal “low quality”. Actually, quite the opposite can be true as well: Mor is here to prove it.
-              With the essence of nature, the design of humans and the power of machinery, Mor produces high quality products that are made to be valued and appreciated. 
-              In the hard process of extracting the complexity of nature, accurately selecting raw materials, as well as searching for top-notch quality and creativity in each and every stage of the production is not only necessary, but mandatory. Compromising on you, can’t be a compromise.
-            </div> 
-         </div>
-       </div>
-
+        </div>      
       
-    <!--FOOTER-->
+      <!-- PARAGRAFO PRESENTAZIONE -->
+      <div class="h-screen w-screen bg-whike text-verde">
+            <div class="ph:mx-14 md:mx-40 h-screen">
+              <div class="lg:h-140 
+              md:h-fit 
+              ph:pt-32 
+              flex items-center">
+                <span class="my-auto font-cronos font-semibold lg:text-8xl md:text-7xl ph:text-5xl ">
+                  Feel the quality<br>in every sheet</span>
+                </div>
+                  <div class="
+                  xl:pl-140
+                  lg:text-2xl 
+                  ph:text-xl 
+                  ph:my-5
+                  font-base my-3 ">
+                    With the essence of nature, the design of humans and the power of machinery, Mor produces high quality products that are made to be valued and appreciated. 
+                    In the hard process of extracting the complexity of nature, accurately selecting raw materials, as well as searching for top-notch quality and creativity in each and every stage of the production is not only necessary, but mandatory. Compromising on you, can’t be a compromise.
+              </div>
+            </div>
+      </div>
+
+      <!--RENDER SCATOLA-->
+      <div class="h-screen w-screen bg-verde text-whyke">
+        <img>
+        <div class="button bg-white text-verde">GO TO SHOP</div>
+      </div>
+
+
+          
+        <!--FOOTER-->
  
      
       </content>
