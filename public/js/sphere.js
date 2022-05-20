@@ -41,7 +41,7 @@ function init() {
   //  GLOBO
   const geometry = new THREE.SphereGeometry(1, 50, 50);
   const texture = new THREE.TextureLoader().load(
-    "/public/03_globe/assets/01_img/globo/GloboV.png"
+    "/public/assets/01_img/globo/GloboV.png"
   );
   //  Rotazione della texture
   texture.wrapS = THREE.RepeatWrapping;
@@ -70,7 +70,7 @@ function addPoints() {
   for (let i = 0; i < trees.length; i++) {
     let start = calc(trees[i].lat, trees[i].lng);
     textures[i] = new THREE.TextureLoader().load(
-      "/public/03_globe/assets/01_img/texture/SVG/" + (i + 1) + ".svg"
+      "/public/assets/01_img/texture/SVG/" + (i + 1) + ".svg"
     );
     materials[i] = new THREE.MeshBasicMaterial({ map: textures[i] });
     let mesh = new THREE.Mesh(

@@ -31,10 +31,13 @@ function loadCards() {
 
       const a = document.createElement("a");
       //TODO Mettere Query ID albero
-      const URL = `/public/04_shop/roll.html?id=${t.id}`;
+      const URL = `/pages/roll.html?id=${t.id}`;
       a.setAttribute("href", URL);
       const img = document.createElement("img");
-      img.setAttribute("src", `/public/04_shop/01_img/01_rolls/${t.id}.png`);
+      img.setAttribute(
+        "src",
+        `/public/assets/01_img/shop/01_rolls/${t.id}.png`
+      );
       img.setAttribute("alt", `${t.type}`);
       img.setAttribute("class", `m-auto py-2 w-40`);
       const div_text = document.createElement("div");
@@ -45,7 +48,7 @@ function loadCards() {
       )}</span>
           <span class="block text-lg font-medium leading-5 pt-3">${prezzo} €</span>
           <span class="block text-lg font-light leading-5 pb-8">per sheet</span>
-          <a href="/public/06_project/project.html" class="button">Subscribe</a>`;
+          <a href="/pages/project.html" class="button">Subscribe</a>`;
 
       a.appendChild(img);
       a.appendChild(div_text);

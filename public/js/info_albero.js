@@ -56,7 +56,7 @@ function loadInfo() {
     provenienza.innerHTML = tree.provenienza;
 
     //  Slideshow
-    const URL_img = `/public/04_shop/01_img/02_slideshow/${tree.id}`;
+    const URL_img = `/public/assets/01_img/shop/02_slideshow/${tree.id}`;
     slide.setAttribute("src", ` ${URL_img}/a.jpg`);
     immagini = [`${URL_img}/a.jpg`, `${URL_img}/b.jpg`, `${URL_img}/c.jpg`];
 
@@ -69,7 +69,10 @@ function loadInfo() {
     lat.innerHTML = tree.lat;
     lng.innerHTML = tree.lng;
     descrizione.innerHTML = tree.descrizione;
-    foto.setAttribute("src", `01_img/03_trees/${tree.id}.jpg `);
+    foto.setAttribute(
+      "src",
+      `/public/assets/01_img/shop/03_trees/${tree.id}.jpg `
+    );
 
     //  Classificazione scientifica
     b_name.innerHTML = tree.bionomial_name;
@@ -85,7 +88,7 @@ function loadInfo() {
       const img = document.createElement("img");
       img.setAttribute("class", `w-24 my-3`);
       const value = tree[f];
-      img.src = `/public/04_shop/01_img/05_features/${value}.svg`;
+      img.src = `/public/assets/01_img/shop/05_features/${value}.svg`;
       const tag = capitalizeFirstLetter(f);
       const diva = document.createElement("div");
       diva.innerHTML = tag;
@@ -96,7 +99,7 @@ function loadInfo() {
       keys.appendChild(card);
     });
 
-    const URL_texture = `/public/04_shop/01_img/04_texture/${tree.id}`;
+    const URL_texture = `/public/assets/01_img/shop/04_texture/${tree.id}`;
     sx.setAttribute("src", `${URL_texture}/sx.svg`);
     sx.setAttribute("alt", `${tree.type}`);
     dx.setAttribute("src", `${URL_texture}/dx.svg`);
