@@ -43,10 +43,10 @@ function loadUsers() {
 
     document.getElementById(
       "rollini"
-    ).innerHTML = `<div><img class="rotolini" src="/public/07_account/assets/${tree_in_uso.class}/used.svg"></div>
-    <div><img class="rotolini" src="/public/07_account/assets/${tree_in_uso.class}/current.svg"></div>
-    <div><img class="rotolini"src="/public/07_account/assets/${tree_in_uso.class}/new.svg"></div>
-    <div><img class="rotolini"src="/public/07_account/assets/${tree_in_uso.class}/new.svg"></div>`;
+    ).innerHTML = `<div><img class="rotolini" src="/public/assets/01_img/account/${tree_in_uso.class}/used.svg"></div>
+    <div><img class="rotolini" src="/public/assets/01_img/account/${tree_in_uso.class}/current.svg"></div>
+    <div><img class="rotolini"src="/public/assets/01_img/account/${tree_in_uso.class}/new.svg"></div>
+    <div><img class="rotolini"src="/public/assets/01_img/account/${tree_in_uso.class}/new.svg"></div>`;
 
     for (let key in rotoli_usati) {
       const roll = rotoli_usati[key];
@@ -83,7 +83,7 @@ function loadUsers() {
 
       const img = document.createElement("img");
       img.setAttribute("class", "ph:w-36 md:w-20 py-3");
-      img.src = `/public/04_shop/01_img/01_rolls/${id}.png`;
+      img.src = `/public/assets/01_img/shop/01_rolls/${id}.png`;
       console.log("id:", id);
 
       const div3 = document.createElement("div");

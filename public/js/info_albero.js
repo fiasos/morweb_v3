@@ -58,7 +58,7 @@ function loadInfo() {
     //  Slideshow
     const URL_img = `/public/assets/01_img/shop/02_slideshow/${tree.id}`;
     slide.setAttribute("src", ` ${URL_img}/a.jpg`);
-    immagini = [`${URL_img}/a.jpg`, `${URL_img}/b.jpg`, `${URL_img}/c.jpg`];
+    immagini = [`${URL_img}/a.jpg`, `${URL_img}/c.jpg`];
 
     //  prezzo
     prezzo_span.innerHTML = `${prezzo} €`;
@@ -129,14 +129,14 @@ asyncCall();
 function prevSlide() {
   currentSlide = currentSlide - 1;
   if (currentSlide === -1) {
-    currentSlide = 2;
+    currentSlide = 1;
   }
   showSlide();
 }
 
 function nextSlide() {
   currentSlide = currentSlide + 1;
-  if (currentSlide === 3) {
+  if (currentSlide === 2) {
     currentSlide = 0;
   }
   showSlide();
