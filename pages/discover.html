@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="w-screen h-screen">
+<html lang="it" class="w-screen h-screen">
 
   <head>
     <meta charset="UTF-8" />
@@ -18,6 +18,9 @@
 
     <!-- DATABASE -->
     <script src="/public/js/firebase-setup.js"></script>
+       <!--LOTTIE-->
+       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
   </head>
 
@@ -30,7 +33,7 @@
           <!--Logo-->
           <div class="flex-grow">
             <a href="/index.html">
-              <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
+              <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24" alt="mor_logo">
             </a>
           </div>
 
@@ -48,7 +51,7 @@
               <div class="flex flex-col justify-center">
                 <div class="relative py-2 sm:max-w-xl mx-auto">
                     <nav x-data="{ open: false }">
-                        <button id="change" class="w-10 h-10 relative focus:outline-none" @click="open = !open">
+                        <button type="button" id="change" class="w-10 h-10 relative focus:outline-none" @click="open = !open">
                                 <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
                                 <span aria-hidden="true" class="rounded block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
                                 <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
@@ -79,73 +82,161 @@
     </header>
 
 
-<!--CONTENT-->
-  <content id="all">
-
     <!-- Render Treem -->
-    <!-- TODO: video olli -->
-    <video autoplay loop muted class="mt-0 h-auto w-full"> 
-     <source src="/public/assets/02_video/mor_film.mp4">
-    </video>
-    <!--Pittogrammi-->
-    <!-- TODO: alessio help -->
-    <div class="my-20">
-        <p class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl text-center">As simple ass..</p>
-        <div>
-        
+        <div class="relative">
+            <!-- <img src="/public/assets/01_img/discover/post_ambiente.png" class="h-full w-screen object-cover"> -->
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/712102481?h=226a9330bb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:4rem;left:0;width:100%;height:100%;" title="Mor Brand Teaser 20s"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>  
+          
+          </div>
+<!--CONTENT-->
+<section id="all">
+
+
+
+
+  <!--Pittogrammi-->
+  <div class="my-20">
+      <p class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl text-center py-28">As simple as</p>
+
+      <div class="grid justify-between xl:mx-60 md:mx-32 sm:mx-24 md:grid-cols-3 ph:grid-cols-1 align-center h-fit">
+        <div class="h-140">
+          <img class="w-14 m-auto p-3" src="/public/assets/01_img/discover/1_1.svg">
+          <p class="text-center text-xl">Insert your credit card</p>
+          <img src="/public/assets/01_img/discover/1.svg">
+          <!-- <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_vk0e9ut9.json" speed="1" loop autoplay class="w-80 m-auto"></lottie-player> -->
         </div>
-        
+        <div class="h-140">
+          <img class="w-14 m-auto p-3" src="/public/assets/01_img/discover/2_2.svg">
+          <p class="text-center  text-xl">Help yourself</p>
+          <img src="/public/assets/01_img/discover/2.svg">
+          <!-- <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_j6tz3fsc.json" speed="1" loop autoplay class="w-152 pt- m-auto mr-20"></lottie-player> -->
+        </div>
+        <div class="h-140">
+          <img class="w-14 m-auto p-3" src="/public/assets/01_img/discover/3_3.svg">
+          <p class="text-center  text-xl">Collect your card</p>
+          <img src="/public/assets/01_img/discover/3.svg">
+          <!-- <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_vk0e9ut9.json" speed="1" loop autoplay class="w-80 m-auto"></lottie-player> -->
+        </div>
+      </div>
+      
+  </div>
+
+  <!--Display Treem-->
+  <!-- TODO: video olli -->
+  <video autoplay loop muted class="mt-0 h-auto w-full"> 
+    <source src="/public/assets/02_video/discover_interfaccia.mp4">
+   </video>
+
+  <!--How it works?-->
+  <div class="w-fit xl:mx-auto md:mx-32 sm:mx-24 ph:mx-8 xl:my-20 md:my-10 ">
+      <p class="xl:py-28 md:py-18 ph:py-8 font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-4xl text-center">How can I get it?</p>
+      <div class="lg:text-2xl md:text-base font-light md:my-20 ph:my-10">
+          <ul>
+              <div class="my-3">
+                  <li><span class="font-medium">  1 - Choose</span></li> 
+                  <li>Check out our paper selection and choose your favourite kind. </li>
+              </div>
+              <div class="my-3">
+                  <li><span class="font-medium">  2 - Subscribe</span></li> 
+                  <li>Did you find it? Great, please sign up and subscribe to get it.</li>
+              </div>
+              <div class="my-3">
+                  <li><span class="font-medium">  3 - Wait</span></li> 
+                  <li>All done: Treem is coming with your first box. Don’t worry, our specialist is going to set it up for you!</li>
+              </div>
+          </ul>
+
+          <div class="h-60">
+             <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_rokndjue.json" speed="1" loop autoplay class="w-80 m-auto"></lottie-player>
+          </div>
+      </div>                   
+  </div>        
+
+  <!--What if ends?-->
+  <div class="w-fit xl:mx-auto md:mx-32 sm:mx-24 ph:mx-8 xl:my-20 md:my-10 ">
+    <p class="xl:py-28 md:py-18 ph:py-8 font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-4xl text-center">What if I run out of toilet paper?</p>
+    <div class="lg:text-2xl md:text-base font-light md:my-20 ph:my-10">
+        <ul>
+            <div class="my-3">
+                <li><span class="font-medium">  1 - Check</span></li> 
+                <li>Treem will tell you when your roll is about to end.</li>
+              </div>
+            <div class="my-3">
+                <li><span class="font-medium">  2 - Wait</span></li> 
+                <li>Your next order will be automatically delivered to you when you're almost outof toilet paper.</li>
+              </div>
+            <div class="my-3">
+                <li><span class="font-medium">  3 - Install</span></li> 
+                <li>The box will be delivered to your door, just install a new roll on your device.</li>
+              </div>
+        </ul>
+
+        <div class="h-60">
+           <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_pgtofgf0.json" speed="1" loop autoplay class="w-80 m-auto"></lottie-player>
+        </div>
+    </div>                   
+</div>  
+
+</section>
+    
+  <!--FOOTER-->
+<footer class="bg-verde text-whike mt-44">
+  <div class="flex flex-col flex-wrap px-4 py-12 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
+    
+    <!--LOGO-->
+    <div class="px-20 flex mx-auto text-left md:flex items-start pb-12">
+        <a href="/public/index.html"><img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24"></a>
     </div>
-    <!--Display Treem-->
-    <!-- TODO: video olli -->
-    <!--How it works?-->
-    <div class="my-20 ph:mx-14 md:mx-40">
-        <span class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl">How can I get it?</span>
-        <div class="lg:text-2xl md:text-base font-light md:my-20 ph:my-10">
-            <ul class="lg:pl-108 md:pl-80">
-                <div class="my-3">
-                    <li><span class="font-medium">  1 - Choose</span></li> 
-                    <li>Check out our paper selection and choose your favourite kind. </li>
-                </div>
-                <div class="my-3">
-                    <li><span class="font-medium">  2 - Subscribe</span></li> 
-                    <li>Did you find it? Great, please sign up and subscribe to get it.</li>
-                </div>
-                <div class="my-3">
-                    <li><span class="font-medium">  3 - Wait</span></li> 
-                    <li>All done: Treem is coming with your first box. Don’t worry, our specialist is going to set it up for you!</li>
-                </div>
-            </ul>
-        </div>                   
-    </div>          
-    <!--What if ends?-->
-    <!-- TODO: ci starebbe animazione rotolo finito -->
-    <div class="my-20 ph:mx-14 md:mx-40">
-        <span class="font-cronos font-semibold lg:text-7xl md:text-5xl ph:text-3xl">What if I run out of toilet paper?</span>
-        <div class="lg:text-2xl md:text-base font-light md:my-20 ph:my-10">
-            <ul class="lg:pl-108 md:pl-80">
-                <div class="my-3">
-                    <li><span class="font-medium">  1 - Check</span></li> 
-                    <li>Treem will tell you when your roll is about to end.</li>
-                </div>
-                <div class="my-3">
-                     <!-- TODO: cambiare testo -->
-                    <li><span class="font-medium">  2 - Order</span></li> 
-                    <li>You can order new rolls directly from Treem or Mor website.</li>
-                </div>
-                <div class="my-3">
-                    <li><span class="font-medium">  3 - Install</span></li> 
-                    <li>The box will be delivered to your door, just install a new roll on your device.</li>
-                </div>
-            </ul>
-        </div>                   
-    </div>   
-    
 
+    <div class="w-full justify-between xxs:text-left flex ph:flex-wrap xxs:flex-nowrap items-start m-auto ph:text-center">
+    <!--get in touch-->
+      <div class="w-full px-4 lg:w-1/3 md:w-1/2 ">
+        <h3 class="mb-3 font-medium">Get in touch</h3>
+        <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
+          <li class="hover:underline"> <a href="/public/06_project/project.html">info.mor@com</a></li>
+          <li class="hover:underline"> <a href="/public/06_project/project.html">+1 (239) 901-2021</a></li>
+        </ul>
+      </div>
 
-  </content>
+    <!-- menu -->
+    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+      <h3 class="mb-3 font-medium ">Menu</h3>
+      <ul class="mb-8 space-y-2 font-light text-sm list-none">
+        <li class="hover:underline"><a href="/public/index.html">Home</a></li>
+        <li class="hover:underline"><a href="/public/02_discover/discover.html"> Discover</li></a>                
+        <li class="hover:underline"><a href="/public/03_globe/globe.html">Globe</a></li>
+        <li class="hover:underline"><a href="04_shop/shop.html">Shop</a></li>
+        <li class="hover:underline"><a href="/public/05_about/about.html">About</a></li>
+      </ul>
+    </div>
     
-  
+    <!--legal-->
+    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+      <h3 class="mb-3 font-medium ">Legal</h3>
+      <ul class="mb-8 space-y-2 font-light text-sm list-none">
+          <li class="hover:underline"><a href="/public/06_project/project.html">Sitemap</a></li>
+          <li class="hover:underline"><a href="/public/06_project/project.html">Terms & conditions</a></li>
+          <li class="hover:underline"><a href="/public/06_project/project.html">Privacy & policy</a></li>
+          <li class="hover:underline"><a href="/public/06_project/project.html">Accessibility</a></li>
+       </ul>
+    </div>
+    
+    <!--social-->
+      <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+        <h3 class="mb-2 font-medium">Social</h3>
+        <ul class="mb-8 space-y-2 font-light text-sm">
+          <li class="hover:underline"><a href="https://www.instagram.com/mor_rolls/" target="_blank">Instagram</a></li>
+        </ul>
+        </div>
+      </div>
+  </div>
+
+  <div class="flex justify-center text-xs font-light pb-10">
+    <p>© 2022 Mor Inc. All rights reserved.</p>
+  </div>
+</footer> 
+   
+
     
     <script src="/public/js/index.js"></script>
     <!--Animazione hamburger-->
