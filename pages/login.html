@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mor</title>
     <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
-    <link href="/src/styles.css" rel="stylesheet" />
-    <link href="/public/styles.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet" />
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +24,12 @@
     <header id="header">
       <!--Bar: LOGO E MENU-->
       <nav>
-        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 bg-whike z-10" >
+        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 z-10" >
           
          <!--Logo-->
          <div class="flex-grow">
           <a href="/index.html">
-            <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
+            <img src="/public/assets/01_img/Logo/Mor_Green.svg" class="w-24">
           </a>
         </div>
 
@@ -64,34 +63,34 @@
 
         <!--Voci menù-->
         <div class="hidden" id="sfondo"> 
-            <div class="grid place-items-center h-152" >
-              <ul class="hidden text-center object-center font-medium text-xl leading-9" id="menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="/pages/discover.html">DISCOVER</a></li>
-                <li><a href="/pages/globe.html">GLOBE</a></li>
-                <li><a href="/pages/shop.html">SHOP</a></li>
-                <li><a href="/pages/about.html">ABOUT</a></li>
-            </ul>
-          </div>
+          <div class="grid place-items-center h-screen" >
+            <ul class="hidden text-center object-center text-2xl leading-10" id="menu">
+            <li><a href="/index.html" class="hover:underline">HOME</a></li>
+            <li><a href="/pages/discover.html" class="hover:underline">DISCOVER</a></li>
+            <li><a href="/pages/globe.html" class="hover:underline">GLOBE</a></li>
+            <li><a href="/pages/shop.html" class="hover:underline">SHOP</a></li>
+            <li><a href="/pages/about.html"class="hover:underline">ABOUT</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
   </header>
 
 
 <!--CONTENT-->
   <content id="all">
-      <div class="justify-center m-auto mt-64 w-fit relative">  
+    <div class="h-screen flex">
+    <div class="m-auto h-fit w-fit">  
             <input placeholder="Username" width="50" class="bg-grigiochiaro text-center rounded-full py-2 my-2"><br>
             <input width="50" class="bg-grigiochiaro text-center rounded-full py-2" type="password" maxlength="12" value="Bella"> 
             
             <a href="/pages/personal_area.html">
-              <button class="my-5 py-2 block w-fit m-auto text-center rounded-full            
-              text-verde bg-whike border-2 border-verde
-              hover:bg-verde hover:text-whike px-6 hover:scale-110">LOGIN</button>
+              <button class="my-5 py-2 block w-fit button m-auto">LOGIN</button>
             </a>
 
            <span class="flex justify-center m-auto w-fit text-center text-sm underline align-center">Forgot your password?</span> 
       </div>
+    </div>  
   
  </content>
 
@@ -100,7 +99,7 @@
     <script src="/public/js/index.js"></script>
     <!--Animazione hamburger-->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <script src="/public/04_shop/Card.js"></script>
+    <script src="/public/js/Card.js"></script>
 
   </body>
 </html>

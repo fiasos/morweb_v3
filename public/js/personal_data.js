@@ -4,6 +4,7 @@ let div;
 
 function loadUsers() {
   let div_uso = document.getElementById("in-uso");
+  let top_player = document.getElementById("top-player");
   let lista = document.getElementById("lista");
   let prezzo = 0;
   let colore = "";
@@ -109,6 +110,7 @@ function loadUsers() {
       lista.appendChild(div);
     }
   }
+  top_player.classList.toggle("invisible");
 }
 
 async function asyncCall() {

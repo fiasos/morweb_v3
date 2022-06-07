@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mor</title>
     <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
-    <link href="/src/styles.css" rel="stylesheet" />
-    <link href="/public/styles.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet" />
      <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,22 +25,20 @@
       <!--Bar: LOGO E MENU-->
       <nav>
         <div class="flex justify-between items-center pt-1 ph:px-5 md:px-9">
-            <!--Logo-->
-            <div class="flex-grow">
-              <a href="/index.html">
-                <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
-              </a>
-            </div>
-  
-            <!--Icona account-->
-            <div class="ph:pr-2 md:pr-4">
-              <a href="/pages/login.html" >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </a >
-            </div>
-  
+          <!--Logo-->
+              <div class="flex-grow">
+                <a href="/index.html">
+                  <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
+                </a>
+              </div>
+          <!--Icona account-->
+              <div class="xxs:pr-2 md:pr-4">
+                <a href="/pages/login.html" >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </a >
+              </div>
           <!--Icona menu-->
               <div class="cursor-pointer" id="burger">
                 <div class="flex flex-col justify-center">
@@ -62,35 +59,36 @@
         </div>
         <!--Voci menù-->
         <div class="hidden" id="sfondo"> 
-            <div class="grid place-items-center h-152" >
-              <ul class="hidden text-center object-center font-medium text-xl leading-9" id="menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="/pages/discover.html">DISCOVER</a></li>
-                <li><a href="/pages/globe.html">GLOBE</a></li>
-                <li><a href="/pages/shop.html">SHOP</a></li>
-                <li><a href="/pages/about.html">ABOUT</a></li>
-            </ul>
-          </div>
+          <div class="grid place-items-center h-screen" >
+            <ul class="hidden text-center object-center text-2xl leading-10" id="menu">
+            <li><a href="/index.html" class="hover:underline">HOME</a></li>
+            <li><a href="/pages/discover.html" class="hover:underline">DISCOVER</a></li>
+            <li><a href="/pages/globe.html" class="hover:underline">GLOBE</a></li>
+            <li><a href="/pages/shop.html" class="hover:underline">SHOP</a></li>
+            <li><a href="/pages/about.html"class="hover:underline">ABOUT</a></li>
+          </ul>
         </div>
+      </div>
 
       </nav>
     </header>
-    <!--CONTENT-->
-      <content id="all">
-      <!-- TODO Fixare testi alberi -->
-     <div class="h-full">
-        <div class="absolute text-right bottom-16 right-9">
-          <div id="treeName" class="font-cronos font-semibold text-5xl "></div>
-          <div id="treeStato" class="font-cronos font-semibold text-3xl h-16" ></div>
-          <div id="treeStrappi" class="text-xl"></div>
+
+    <content id="all">
+    <!--INFO ALBERI IN HOVER-->
+       <div class="h-full">
+        <div class="absolute text-right md:right-9 ph:right-3 md:bottom-10 ph:bottom-3">
+          <div id="treeName" class="font-cronos font-semibold md:text-5xl ph:text-xl"></div>
+          <div id="treeStato" class="font-cronos font-semibold md:text-3xl ph:text-lg ph:h-auto md:h-16" ></div>
+          <div id="treeStrappi" class="md:text-xl ph:text-lg"></div>
         </div>
      </div>
 
+    <!--OUR WORLD-->
       <div class="h-full">
-        <div class="absolute font-cronos font-semibold text-5xl bottom-16">
-          <p class="pl-9">Our World</p>
-          <p class="pl-9">Our Products</p>
-          <p class="pl-9">Our Community</p>
+        <div class="absolute font-cronos font-semibold md:text-5xl ph:text-xl md:bottom-10 ph:bottom-3">
+          <p class="md:pl-10 ph:pl-3">Our World</p>
+          <p class="md:pl-10 ph:pl-3">Our Products</p>
+          <p class="md:pl-10 ph:pl-3">Our Community</p>
         </div >
       </div>
 

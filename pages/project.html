@@ -1,16 +1,13 @@
-<!-- npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-screen h-screen">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
+    <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
     <link rel="icon" href="/public/assets/01_img/Marchio_1x1.png" />
-
-    <link href="/src/styles.css" rel="stylesheet" />
-    <link href="/public/styles.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet" />
 
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,117 +17,125 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
       rel="stylesheet"
     />
+    <script src="https://player.vimeo.com/api/player.js"></script>
   </head>
-  <style>
-    #loading {
-      width: 50px;
-      height: 50px;
-      margin: 30px auto;
-      position: relative;
-    }
-    .outer-shadow,
-    .inner-shadow {
-      z-index: 4;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 100%;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    }
-    .inner-shadow {
-      top: 50%;
-      left: 50%;
-      width: 40px;
-      height: 40px;
-      margin-left: -20px;
-      margin-top: -20px;
-      border-radius: 100%;
-      background-color: #ffffff;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    }
-    .hold {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      clip: rect(0px, 50px, 50px, 25px);
-      border-radius: 100%;
-      background-color: #fff;
-    }
-    .fill,
-    .dot span {
-      background-color: #f50;
-    }
-    .fill {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 100%;
-      clip: rect(0px, 25px, 50px, 0px);
-    }
-    .left .fill {
-      z-index: 1;
-      -webkit-animation: left 1s linear;
-      -moz-animation: left 1s linear;
-      animation: left 1s linear both;
-    }
-    @keyframes left {
-      0% {
-        -webkit-transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(180deg);
-      }
-    }
-    @-webkit-keyframes left {
-      0% {
-        -webkit-transform: rotate(0deg);
-      }
-      100% {
-        -webkit-transform: rotate(180deg);
-      }
-    }
-    .right {
-      z-index: 3;
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-    .right .fill {
-      z-index: 3;
-      -webkit-animation: right 1s linear;
-      -moz-animation: right 1s linear;
-      animation: right 1s linear both;
-      -webkit-animation-delay: 1s;
-      -moz-animation-delay: 1s;
-      animation-delay: 1s;
-    }
-    @keyframes right {
-      0% {
-        -webkit-transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(180deg);
-      }
-    }
-    @-webkit-keyframes right {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(180deg);
-      }
-    }
-    .inner-shadow img {
-      margin-left: 8px;
-      margin-top: 7px;
-    }
-  </style>
 
-  <body class="m-32 font-din text-8xl">
-    <h1 class="text-blue-800 uppercase">
-      Actually,
-      <br />there's nothing here
-    </h1>
-    <h2 class="text-blue-600 text-5xl py-7">It's a project</h2>
+
+  <header id="header">
+    <!--Bar: LOGO E MENU-->
+    <nav>
+      <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 z-20" >
+      
+        <!--Logo-->
+        <div class="flex-grow">
+          <a href="/index.html">
+            <img src="/public/assets/01_img/Logo/Mor_Green.svg" class="w-24">
+          </a>
+        </div>
+        <!--Icona account-->
+        <div class="ph:pr-2 md:pr-4">
+          <a href="/pages/login.html" >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </a >
+        </div>
+        <!--Icona menu-->
+          <div class="cursor-pointer" id="burger">
+            <div class="flex flex-col justify-center">
+              <div class="relative py-2 sm:max-w-xl mx-auto">
+                  <nav x-data="{ open: false }">
+                      <button id="change" class="text-verde w-10 h-10 relative focus:outline-none" @click="open = !open">
+                              <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                              <span aria-hidden="true" class="rounded block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                              <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                              <span aria-hidden="true" class=" rounded block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                          </div>
+                      </button>
+                  </nav>
+              </div>
+            </div>
+            </svg>
+          </div>
+      </div>
+      <!--Voci menù-->
+      <div class="hidden" id="sfondo"> 
+          <div class="grid place-items-center h-screen" >
+            <ul class="hidden text-center object-center text-2xl leading-10" id="menu">
+            <li><a href="/index.html" class="hover:underline">HOME</a></li>
+            <li><a href="/pages/discover.html" class="hover:underline">DISCOVER</a></li>
+            <li><a href="/pages/globe.html" class="hover:underline">GLOBE</a></li>
+            <li><a href="/pages/globe.html" class="hover:underline">SHOP</a></li>
+            <li><a href="/pages/about.html"class="hover:underline">ABOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   </header>
+
+  <body class="font-rubik bg-whike text-verde overflow-x-hidden">
+   <content id="all">
+     <div class="m-auto ph:py-32 xxs:py-auto text-center mx-40 ph:mx-8">
+          <!-- uppercase font-bold text-4xl -->
+          <p class="font-cronos font-bold lg:text-7xl md:text-6xl ph:text-5xl">
+            Actually, there's nothing here
+          </p>
+          <p class="py-7 lg:text-2xl  ph:text-xl font-light lg:mx-40 md:mx-18 ph:mx-4">Mor is a speculative project developed within the Final Synthesis Studio of the Communication Design at Politecnico di Milano 
+          <br> <br>This is the trailer of the project  </p>
+       
+        <div class="my-20 md:mx-40 ph:mx-4" style="padding: 56.25% 0 0 0; position: relative;">
+          <iframe
+            src="https://player.vimeo.com/video/674699622?h=de498b9ff3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+            title="mor_60s">
+          </iframe>    
+        </div>
+
+            <div class="mt-8 flex justify-between text-left md:mx-40 ph:mx-4">
+              <ul>
+                <li>TEAM</li>
+                <li> Chiara Barberi </li>
+                <li> Sofia Bonfanti </li>
+                <li> Alessio Brioschi</li>
+                <li> Olivia Manara</li>
+                <li> Federica Pasquini</li>
+              </ul>
+
+              <ul class="ph:hidden md:inline">
+                <li>PROFESSORS</li>
+                <li> Francesco Ermanno Guida</li>
+                <li> Alessandro Masserdotti </li>
+                <li> Pietro Buffa di Castelalto </li>
+                <li> Giacomo Scandolara</li>
+              </ul>
+
+
+              <ul class="ph:hidden md:inline">
+                <li>TEACHING ASSISTANT</li>
+                <li> Jacopo Marcello Biffi</li>
+                <li> Michele Invernizzi</li>
+                <li> Claudia Tranti</li>
+                <li> Adele Mazzali</li>
+              </ul>
+
+              <p>Politecnico di Milano
+                <br> Design della Comunicazione
+                <br> Laboratorio di Sintesi - C1
+                <br> A.A 2021–2022
+              </p>
+
+              
+
+              
+            </div>
+     </div>
+   </content>
   </body>
+
+  <script src="/public/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
 </html>

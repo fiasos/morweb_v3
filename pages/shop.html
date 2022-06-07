@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mor</title>
     <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
-    <link href="/src/styles.css" rel="stylesheet" />
-    <link href="/public/styles.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +26,7 @@
   <body class="font-rubik text-verde bg-whike min-h-screen overflow-x-hidden">
 
     <!-- caricamento pagina -->
-    <div id="top-player" class="h-screen w-screen bg-verde z-30 fixed flex">
+    <div id="top-player" class="h-screen w-screen bg-verde z-50 fixed flex">
       <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_j6tz3fsc.json" speed="1" class="flex content-center w-152 h-152 mx-auto my-auto pt-20" loop autoplay></lottie-player>
     </div>
       
@@ -75,7 +74,7 @@
             <ul class="hidden text-center object-center text-2xl leading-10" id="menu">
             <li><a href="/index.html" class="hover:underline">HOME</a></li>
             <li><a href="/pages/discover.html" class="hover:underline">DISCOVER</a></li>
-            <li><a href="/pages/discover.html" class="hover:underline">GLOBE</a></li>
+            <li><a href="/pages/globe.html" class="hover:underline">GLOBE</a></li>
             <li><a href="/pages/shop.html" class="hover:underline">SHOP</a></li>
             <li><a href="/pages/about.html"class="hover:underline">ABOUT</a></li>
           </ul>
@@ -90,7 +89,7 @@
   <content id="all">
     
     <!--Intro--> 
-       <div class="m-auto text-center mx-4 mt-32">
+       <div class="m-auto text-center px-4 pt-32">
         <p class="font-cronos font-bold text-center ph:text-6xl md:text-7xl">Rolls </p>
           <p class="font-cronos font-semibold 
           md:text-4xl xxs:text-3xl ph:text-xl">Shop our finest selection of paper</p>
@@ -112,58 +111,61 @@
 
     <!--FOOTER-->
     <footer>
-      <div class="bg-verde text-whike w-screen h-fit mt-16"> 
-          <!--Logo-->
-          <div class="flex justify-center p-10 ">
-            <a href="/index.html">
-              <img src="/public/assets/01_img/Logo/Mor_Green.svg" class="w-24">
-            </a>
-          </div>
-        
-        <div class="py-10 grid xl:mx-60 md:mx-32 sm:mx-24 md:grid-cols-4 xxs:grid-cols-1 text-left ">      
-        <!--get in touch-->
-        <div class="w-80 px-12 ">
-          <h3 class="mb-3 font-medium">Get in touch</h3>
-          <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
-            <li class="hover:underline"> <a href="/pages/project.html">info.mor@com</a></li>
-            <li class="hover:underline"> <a href="/pages/project.html">+1 (239) 901-2021</a></li>
-          </ul>
-        </div>
-        <!--menu-->
-        <div class="w-80  px-12">
-          <h3 class="mb-3 font-medium ">Menu</h3>
-          <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
-            <li class="hover:underline"><a href="/index.html">Home</a></li>
-            <li class="hover:underline"><a href="/pages/discover.html"> Discover</li></a>                
-            <li class="hover:underline"><a href="/pages/globe.html">Globe</a></li>
-            <li class="hover:underline"><a href="/pages/shop.html">Shop</a></li>
-            <li class="hover:underline"><a href="/pages/about.html">About</a></li>
-          </ul>
-        </div>
-        <!--legal-->
-          <div class="w-80  px-12 ">
-            <h3 class="mb-3 font-medium ">Legal</h3>
-            <ul class="mb-8 space-y-2 font-light text-sm list-none">
-                <li class="hover:underline"><a href="/pages/project.html">Sitemap</a></li>
-                <li class="hover:underline"><a href="/pages/project.html">Terms & conditions</a></li>
-                <li class="hover:underline"><a href="/pages/project.html">Privacy & policy</a></li>
-                <li class="hover:underline"><a href="/pages/project.html">Accessibility</a></li>
-            </ul>
-          </div>
-        <!--social-->
-          <div class="w-80  px-12">
-            <h3 class="mb-2 font-medium">Social</h3>
-            <ul class="mb-8 space-y-2 font-light text-sm">
-              <li class="hover:underline"><a href="https://www.instagram.com/mor_rolls/" target="_blank">Instagram</a></li>
-            </ul>
+      <footer>
+        <div class="bg-verde text-whike w-screen h-fit pt-4"> 
+            <!--Logo-->
+            <div class="flex justify-center p-4">
+              <a href="/index.html">
+                <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-18">
+              </a>
             </div>
+          
+          <div class="grid py-4 xl:mx-60 md:mx-24 sm:mx-8 md:grid-cols-4 ph:grid-cols-2 text-left ">      
+          <!--get in touch-->
+          <div class=" md:order-1 ph:order-1 mx-auto ">
+            <h3 class="mb-3 font-medium">Get in touch</h3>
+            <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
+              <li class="hover:underline"> <a href="/pages/project.html">info.mor@com</a></li>
+              <li class="hover:underline"> <a href="/pages/project.html">+1 (239) 901-2021</a></li>
+            </ul>
+          </div>
+          <!--menu-->
+          <div class="md:order-2 ph:order-3 mx-auto">
+            <h3 class="mb-3 font-medium ">Menu</h3>
+            <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
+              <li class="hover:underline"><a href="/index.html">Home</a></li>
+              <li class="hover:underline"><a href="/pages/discover.html"> Discover</li></a>                
+              <li class="hover:underline"><a href="/pages/globe.html">Globe</a></li>
+              <li class="hover:underline"><a href="/pages/shop.html">Shop</a></li>
+              <li class="hover:underline"><a href="/pages/about.html">About</a></li>
+            </ul>
+          </div>
+          <!--legal-->
+            <div class=" md:order-3 ph:order-4 mx-auto ">
+              <h3 class="mb-3 font-medium ">Legal</h3>
+              <ul class="mb-8 space-y-2 font-light text-sm list-none">
+                  <li class="hover:underline"><a href="/pages/project.html">Sitemap</a></li>
+                  <li class="hover:underline"><a href="/pages/project.html">Terms & conditions</a></li>
+                  <li class="hover:underline"><a href="/pages/project.html">Privacy & policy</a></li>
+                  <li class="hover:underline"><a href="/pages/project.html">Accessibility</a></li>
+              </ul>
+            </div>
+          <!--social-->
+            <div class=" md:order-4 ph:order-2 mx-auto">
+              <h3 class="mb-2 font-medium">Social</h3>
+              <ul class="mb-8 space-y-2 font-light text-sm">
+                <li class="hover:underline"><a href="https://www.instagram.com/mor_rolls/" target="_blank">Instagram</a></li>
+              </ul>
+              </div>
+
+          </div>
+          <div class="flex justify-center text-xs font-light p-4">
+            <p>© 2022 Mor Inc. All rights reserved.</p>      
+          </div>
 
         </div>
-        <div class="flex justify-center text-xs font-light pb-5">
-          <p>© 2022 Mor Inc. All rights reserved.</p>      
-        </div>
+      </footer>
 
-      </div>
     </footer>
 
   </content>
@@ -180,5 +182,3 @@
 
 
 
-
- 

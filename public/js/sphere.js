@@ -41,7 +41,7 @@ function init() {
   //  GLOBO
   const geometry = new THREE.SphereGeometry(1, 50, 50);
   const texture = new THREE.TextureLoader().load(
-    "/public/assets/01_img/globo/GloboV.png"
+    "/public/assets/01_img/globo/Globo4.png"
   );
   //  Rotazione della texture
   texture.wrapS = THREE.RepeatWrapping;

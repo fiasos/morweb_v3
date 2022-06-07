@@ -39,7 +39,10 @@ function loadCards() {
         `/public/assets/01_img/shop/01_rolls/${t.id}.png`
       );
       img.setAttribute("alt", `${t.type}`);
-      img.setAttribute("class", `m-auto py-2 w-40`);
+      img.setAttribute(
+        "class",
+        `m-auto py-2 w-40 hover:scale-110 transition ease transition-duration: 150ms`
+      );
       const div_text = document.createElement("div");
       div_text.setAttribute("class", `m-4 text-center`);
       div_text.innerHTML = `<p class="font-semibold text-2xl h-16">${t.type}</p>

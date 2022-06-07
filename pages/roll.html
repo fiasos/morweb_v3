@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mor</title>
     <link rel="icon" href="/public/assets/01_img/Logo/Marchio_1x1.png" />
-    <link href="/src/styles.css" rel="stylesheet" />
-    <link href="/public/styles.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet" />
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,15 +24,15 @@
   <style>
       .jscontainer {
           position: relative;
-          width: 50%;
+          width: 60%;
           margin: auto;}
         .myslides {
          position: relative;
           transform: scale(1);
           transition: transform .2s ease;}
-        .myslides:hover {
+        /* .myslides:hover {
           transform: scale(1.05);
-          transition: transform .2s ease;}
+          transition: transform .2s ease;} */
         .prev, .next {
           position: absolute;
           top: 45%;
@@ -88,12 +87,12 @@
     <header id="header">
       <!--Bar: LOGO E MENU-->
       <nav>
-        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 bg-whike z-10" >
+        <div class="fixed w-full top-0 flex justify-between items-center pt-1 ph:px-5 md:px-9 z-10" >
           
        <!--Logo-->
        <div class="flex-grow">
         <a href="/index.html">
-          <img src="/public/assets/01_img/Logo/Mor_white.svg" class="w-24">
+          <img src="/public/assets/01_img/Logo/Mor_Green.svg" class="w-24">
         </a>
       </div>
 
@@ -128,7 +127,7 @@
         <div class="hidden" id="sfondo"> 
             <div class="grid place-items-center h-152" >
               <ul class="hidden text-center object-center font-medium text-xl leading-9" id="menu">
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="/index.html">HOME</a></li>
                 <li><a href="/pages/discover.html">DISCOVER</a></li>
                 <li><a href="/pages/globe.html">GLOBE</a></li>
                 <li><a href="/pages/shop.html">SHOP</a></li>
@@ -143,13 +142,14 @@
 
 <!--CONTENT-->
   <content id="all" class="hidden">
-      <div class="lg:mx-32 xxs:mx-16">
+      <div class="lg:mx-48 md:mx-30 ph:mx-8">
 
           <!--Titolo-->
-          <div class="text-center text-verde m-auto xxs:my-10 ph:py-8 xxs:py-auto">
-            <p id="titolo" class="font-cronos font-bold md:text-6xl xxs:text-5xl ph:text-3xl"> </p> 
-            <spam id="provenienza" class="font-cronos font-semibold md:text-4xl xxs:text-3xl ph:text-xl"> </spam>
+          <div class="text-center text-verde m-auto xxs:my-10 py-8 ph:pt-24 py-auto">
+            <p id="titolo" class="font-cronos font-bold ph:text-6xl md:text-7xl"> </p> 
+            <spam id="provenienza" class="font-cronos font-semibold  md:text-4xl xxs:text-3xl ph:text-xl"> </spam>
           </div>
+
           <!--Slideshow container-->
           <div class="jscontainer">
               <div class="myslides">
@@ -159,6 +159,7 @@
               <a class="prev cursor-pointer" onclick="prevSlide(-1)">&#10094;</a> 
               <a class="next cursor-pointer" onclick="nextSlide (1)">&#10095;</a> 
           </div>
+          
           <!--info-->
           <div class="my-6 text-center">
             <span id="prezzo" class="block text-xl font-medium leading-5">-- €</span>
@@ -180,11 +181,12 @@
             <!-- TAB CONTENT -->
             <!--1 Descrizione-->
               <div id="presentazione" class="tabcontent">
+                
                 <div class="grid m-auto lg:grid-cols-2 ph:grid-cols-1 py-8">
                     <!--Item 1-->
                     <div>
                         <span id="titolett" class="titoletto">--</span>
-                          <a href="/public/03_globe/globe.html">
+                          <a href="/pages/globe.html">
                             <ul class="py-3 w-52">
                               <li id="forest" class="hover:underline">--</li> 
                               <li id="lat">Lat</li>
@@ -212,34 +214,21 @@
                         </div>                           
                     </div>
                     <!--Item 2-->
-                    <div class="w-96 xxs:justify-self-start lg:justify-self-end lg:pl-14 p-0">
-                    <img id="foto" class="w-auto" src="">
+                    <div class="md:w-96 ph:w-80 m-auto md:px-5 ph:px-0">
+                      <img id="foto" class="w-auto" src="">
                     </div>
-                  </div>
+                </div>
+
               </div>
+
               <!--2 Key features-->
               <div id="features" class="tabcontent">
                 <div class="py-8">
-                  <div id="keys" class="grid xl:mx-80 lg:xm-60 md:mx-32 sm:mx-24  md:grid-cols-4 xxs:grid-cols-2 ph:grid-cols-1 text-center">
-                    <!-- <div class="m-auto">
-                      <img class="w-24 my-3" src="/public/04_shop/01_img/05_features/2.svg">
-                      <div>Softness</div>
-                    </div>
-
-                    <div>Resistence</div>
-                    <div>Thickness</div>
-                    <div>Absorbency</div> -->
+                  <div id="keys" class="grid lg:xm-48 md:mx-30 sm:mx-8  md:grid-cols-4 ph:grid-cols-2 text-center">
                   </div>
-                  
-                  <!-- <div class="pt-9 border-b border-grigioscuro">Compare similar rolls</div>
-                    <div class="grid m-auto md:grid-cols-4 xxs:grid-cols-2 ph:grid-cols-1 text-center">
-                      <div>Softness</div>
-                      <div>Resistence</div>
-                      <div>Thickness</div>
-                      <div>Absorbency</div>
-                    </div> -->
                 </div>
               </div>
+              
               <!--3 Details-->
               <div id="dettagli" class="tabcontent">
                 <div class="py-8">
@@ -274,77 +263,78 @@
    
   
       <!--Banner review-->
-      <div id="banner" class="flex bg-verde lg:h-120 text-whike items:center justify-between xxs:h-80 mt-10">
+      <div id="banner" class="flex bg-verde lg:h-120 text-whike items:center justify-between ph:h-80 mt-10">
+        <!--Texture SX-->
         <img id="sx" src="" alt="" class="ph:hidden sm:inline-block">
         <div id="banner_testo" class=" m-auto text-center top-1/2 left-1/2o w-auto">
           <h2 class="block md:text-2xl sm: text-xl font-medium">OUR BEST REVIEW IS YOUR SATISFACTION</h2>
           <h1 class="font-thin md:text-lg sm:text-base">Discover how many people love this tree</h1>
           <div class="p-10">
-            <a  href="/public/03_globe/globe.html">
+            <a  href="/pages/globe.html">
               <h1 id="link_banner" class="font-thin md:text-lg sm:text-base xxs:text-lg hover:underline">View the community</h1>
             </a>
           </div>
         </div>
+        <!--Texture DX-->
         <img id="dx" src="" alt="" class="ph:hidden sm:inline-block">
       </div>
     
     <!--FOOTER-->
-    <footer class="bg-whike text-verde" id="footer">
-      <div class="container flex flex-col flex-wrap px-4 py-12 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
+    <footer id="footer">
+      <div class="bg-whike text-verde w-screen h-fit pt-4"> 
+          <!--Logo-->
+          <div class="flex justify-center p-4">
+            <a href="/index.html">
+              <img src="/public/assets/01_img/Logo/Mor_Green.svg" class="w-18">
+            </a>
+          </div>
         
-      <!--LOGO-->
-      <div class="px-20 flex mx-auto text-left md:flex items-start pb-12">
-        <a href="/public/index.html"><img src="/public/assets/01_img/Logo/Mor_Green.svg" class="w-24"></a>
-      </div>
-
-    
-    <div class="justify-between w-full mt-4 text-left flex items-start">
+        <div class="grid py-4 xl:mx-60 md:mx-24 sm:mx-8 md:grid-cols-4 ph:grid-cols-2 text-left ">      
         <!--get in touch-->
-      <div class="w-full px-4 lg:w-1/3 md:w-1/2 ">
-        <h3 class="mb-3 font-medium">Get in touch</h3>
-        <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
-          <li class="hover:underline"> <a href="/pages/project.html">info.mor@com</a></li>
-          <li class="hover:underline"> <a href="/pages/project.html">+1 (239) 901-2021</a></li>
-        </ul>
-      </div>
-
-    <!-- menu -->
-    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-      <h3 class="mb-3 font-medium ">Menu</h3>
-      <ul class="mb-8 space-y-2 font-light text-sm list-none">
-        <li class="hover:underline"><a href="/index.html">Home</a></li>
-        <li class="hover:underline"><a href="/pages/discover.html"> Discover</li></a>                
-        <li class="hover:underline"><a href="/pages/globe.html">Globe</a></li>
-        <li class="hover:underline"><a href="/pages/shop.html">Shop</a></li>
-        <li class="hover:underline"><a href="/pages/about.html">About</a></li>
-      </ul>
-    </div>
-    
-    <!--legal-->
-    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-      <h3 class="mb-3 font-medium ">Legal</h3>
-      <ul class="mb-8 space-y-2 font-light text-sm list-none">
-          <li class="hover:underline"><a href="/pages/project.html">Sitemap</a></li>
-          <li class="hover:underline"><a href="/pages/project.html">Terms & conditions</a></li>
-          <li class="hover:underline"><a href="/pages/project.html">Privacy & policy</a></li>
-          <li class="hover:underline"><a href="/pages/project.html">Accessibility</a></li>
-       </ul>
-    </div>
-    
-          
+        <div class=" md:order-1 ph:order-1 mx-auto ">
+          <h3 class="mb-3 font-medium">Get in touch</h3>
+          <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
+            <li class="hover:underline"> <a href="/pages/project.html">info.mor@com</a></li>
+            <li class="hover:underline"> <a href="/pages/project.html">+1 (239) 901-2021</a></li>
+          </ul>
+        </div>
+        <!--menu-->
+        <div class="md:order-2 ph:order-3 mx-auto">
+          <h3 class="mb-3 font-medium ">Menu</h3>
+          <ul class="mb-8 space-y-2 font-light text-sm list-none leading-4">
+            <li class="hover:underline"><a href="/index.html">Home</a></li>
+            <li class="hover:underline"><a href="/pages/discover.html"> Discover</li></a>                
+            <li class="hover:underline"><a href="/pages/globe.html">Globe</a></li>
+            <li class="hover:underline"><a href="/pages/shop.html">Shop</a></li>
+            <li class="hover:underline"><a href="/pages/about.html">About</a></li>
+          </ul>
+        </div>
+        <!--legal-->
+          <div class=" md:order-3 ph:order-4 mx-auto ">
+            <h3 class="mb-3 font-medium ">Legal</h3>
+            <ul class="mb-8 space-y-2 font-light text-sm list-none">
+                <li class="hover:underline"><a href="/pages/project.html">Sitemap</a></li>
+                <li class="hover:underline"><a href="/pages/project.html">Terms & conditions</a></li>
+                <li class="hover:underline"><a href="/pages/project.html">Privacy & policy</a></li>
+                <li class="hover:underline"><a href="/pages/project.html">Accessibility</a></li>
+            </ul>
+          </div>
         <!--social-->
-          <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+          <div class=" md:order-4 ph:order-2 mx-auto">
             <h3 class="mb-2 font-medium">Social</h3>
             <ul class="mb-8 space-y-2 font-light text-sm">
               <li class="hover:underline"><a href="https://www.instagram.com/mor_rolls/" target="_blank">Instagram</a></li>
             </ul>
             </div>
-          </div>
-      </div>
-      <div class="flex justify-center text-xs font-light pb-10">
-        <p>© 2022 Mor Inc. All rights reserved.</p>      
+
+        </div>
+        <div class="flex justify-center text-xs font-light p-4">
+          <p>© 2022 Mor Inc. All rights reserved.</p>      
+        </div>
+
       </div>
     </footer>
+
   </content>
     
 
